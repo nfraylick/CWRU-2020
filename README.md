@@ -1,2 +1,2 @@
-# CWRU-2020
+# CWRU-2020 v2
 Hack for HackCWRU

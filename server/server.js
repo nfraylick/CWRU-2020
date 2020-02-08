@@ -5,7 +5,7 @@ const mongoose = require('mongoose')
 
 const server = new Hapi.Server({
     host: "localhost",
-    port: 5001,
+    port: process.env.PORT || 5001,
     routes: {
         cors: true
     }

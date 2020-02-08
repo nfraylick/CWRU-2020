@@ -3,47 +3,74 @@
 <head>
 <meta charset="utf-8">
 <title>Start_Page</title>
+<link rel="stylesheet" href="PopUp.css">
 </head>
 	
-<style>
-	
-	.login    {background-color: inherit;
-	           font-size: 400%;
-	           border-style: none;
-	           width: 276px;
-	           height: 300px;
-	           margin: 29px 42px;
-	           padding: 35px;
-	           border-radius: 20px;
-			   cursor: pointer;}
-	.register {background-color: inherit;
-	           font-size: 400%;
-	           border-style: none;
-	           width: 275px;
-			   height: 505px;
-			   margin: -7px 42px;
-	           padding: 35px;
-	           border-radius: 20px;
-	           cursor: pointer;}
 
-	body      {background-image: url(img/Hackathon1.jpg);
-	           background-repeat: no-repeat;
-	           background-attachment: fixed;
-	           background-size: 100% 100%;}
-	
-</style>
 
 <body>
-	<div style="text-align: right;">
-
-		<a href="Login_Page.html"><button type="submit" class="login"></button></a>
-
-	</div>
 	<div style="text-align: right;">
 		
 		<a href="Register_Page.html"><button class="register"></button></a>
 		
 </div>
+	
+<button style="background: url(img/Login_Button.jpg)" class="open-button" onclick="openForm()"></button>
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+
+    <label for="email"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+	
+<button style="background: url(img/Register_Button.jpg)" class="open-button1" onclick="openForm1()"></button>
+
+<div class="form-popup1" id="myForm1">
+  <form action="/action_page.php" class="form-container1">
+
+    <label for="First Name"><b>First Name</b></label>
+    <input type="text" placeholder="Enter First Name" name="First Name" required><br>
+	  
+	<label for="Last Name"><b>Last Name</b></label>
+    <input type="text" placeholder="Enter Last Name" name="Last Name" required>
+	  
+	<label for="Username"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="Username" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm1()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+	
+	function openForm1() {
+  document.getElementById("myForm1").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+	
+function closeForm1() {
+  document.getElementById("myForm1").style.display = "none";
+}
+
+	</script>
 	
 </body>
 </html>

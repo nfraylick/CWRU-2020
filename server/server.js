@@ -13,7 +13,8 @@ const server = new Hapi.Server({
 
 server.app.db = mongoose.connect(
     'mongodb+srv://neil:n8ai81Dj6T154a3V@cwru-2020-dev1r.mongodb.net/test?retryWrites=true&w=majority',
-    { useNewUrlPasrser: true }
+    { useNewUrlParser: true, useUnifiedTopology: true },
+    
 )
 
 const init = async() => {

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title></title>
+ <style>
+     *{margin: 2px;
+     padding: 0;
+     }
+     #map {
+		 top: 50px;
+         left:10px;
+         height: 500px;
+         width: 50%;
+     }
+     container{
+		 float:right; position: absolute; left:53%; top:40px; height: 4000px; width: 1000px
+	 }
+	 ul{
+		 list-style:none;
+		 text-indent: 1em;
+	 }
+	
+	 span{
+		 font-family: arial; 
+		 font-weight: bold
+	 }
+	 li{
+		 font-family: arial;
+	 }
+     /* Dropdown Button */
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+</style>  
+ <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<div width="40%"><div id="map"></div>
+<br />
+<br />
+
+<a href="../Home_page.html">Go home</a>
+	<container>
+    <h1 style="font-size: 350%; position: 400px">Today</h1>
+        <div class="dropdown" style="left: 50%; ">
+            <button onclick="myFunction()" style="border-radius: 25px;" class="dropbtn">Filter</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="day.html">Today</a>
+              <a href="week.html">Last Week</a>
+              <a href="month.html">Last Month</a>
+            </div>
+          </div>
+          <br />
+          
+		<img src="../img/icon.png" width="30" alt="icon" style="float:left"/>
+		<h1 style="font-family:helvetica; font-size: 300%">&nbsp;Starbucks</h1>
+		<ul style="position: 400px">
+			<li><span>Catagory-</span> Food & Drink</li>
+			<li><span>Payment-</span> Chip Reader</li>
+			
+		</ul>
+		<br	/>
+		<br	/>
+		<br	/>
+		<br	/>
+		<img src="../img/icon.png" width="30" alt="icon" style="float:left"/>
+		<h1 style="font-family:helvetica; font-size: 300%">&nbsp;Skyline Chili</h1>
+		<ul style="position: 400px">
+			<li><span>Catagory-</span> Food & Drink</li>
+			<li><span>Payment-</span> Chip Reader</li>
+		</ul>
+		<br	/>
+		<br	/>
+		<br	/>
+		<br	/>
+		<img src="../img/icon.png" width="30" alt="icon" style="float:left"/>
+		<h1 style="font-family:helvetica; font-size: 300%">&nbsp;Atlas Cinema</h1>
+		<ul style="position: 400px">
+			<li><span>Catagory-</span> Entertainment</li>
+			<li><span>Payment-</span> Chip Reader & Signature</li>
+		</ul>
+		<br	/>
+		<br	/>
+		<br	/>
+		<br	/>
+		<img src="../img/icon.png" width="30" alt="icon" style="float:left"/>
+		<h1 style="font-family:helvetica; font-size: 300%">&nbsp;Walmart Supercenter</h1>
+		<ul style="position: 400px">
+			<li><span>Catagory-</span> Retail</li>
+			<li><span>Payment-</span> Chip Reader</li>
+		</ul>
+		<br	/>
+		<br	/>
+		<br	/>
+        <br	/>
+        <div id="potential-hack">
+            <img  src="../img/icon.png" width="30" alt="icon" style="float:left"/>
+            <h1 style="font-family:helvetica; font-size: 300%">&nbsp;Blue Devil Cafe</h1>
+            <ul style="position: 400px">
+                <li><span>Catagory-</span> Food & Drink</li>
+                <li><span>Payment-</span> Mobile Scan</li>
+            </ul>
+            <p>Warning Suspicious Purchase</p>
+            <button  onclick="removeElement('potential-hack')" type="button" class="btn btn-warning">Remove</button>
+              
+        </div>
+		
+	  
+	</container>
+  
+</div>
+
+
+<script>
+    /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+    function removeElement(elementId){
+        var element = document.getElementById(elementId);
+        element.parentNode.removeChild(element);
+    }
+    function initMap(){
+        var myLatlng = new google.maps.LatLng(41.504555,-81.612659);
+        const starbucksLatlng = new google.maps.LatLng(41.501229, -81.594072);
+        const skylineMarkerLatLng = new google.maps.LatLng(41.519118, -81.473809);
+        const atlasMarkerLatLng = new google.maps.LatLng(41.523905, -81.436303);
+        const walmartMarkerLatLng = new google.maps.LatLng(41.509687, -81.540041);
+        const ltuMarkerLatLng = new google.maps.LatLng(42.475396, -83.250162);
+
+
+        var mapOptions = {
+        zoom: 10,
+        center: myLatlng
+        }
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+        var starbuckmarker = new google.maps.Marker({
+            position: starbucksLatlng,
+            label: "1",
+            title:"Starbucks:\n-$7.24"
+        });
+
+        var skylineMarker = new google.maps.Marker({
+            position: skylineMarkerLatLng,
+            label: "2",
+            title:"Skyline Chili:\n-$23.56"
+        });
+
+        var atlasMarker = new google.maps.Marker({
+            position: atlasMarkerLatLng,
+           label: "3",
+            title:"Atlas:\n-$10.70"
+        });
+
+        var walmartMarker = new google.maps.Marker({
+            position: walmartMarkerLatLng,
+            label: "4",
+            title:"Walmart:\n-$34.36"
+        });
+
+        var ltuMarker = new google.maps.Marker({
+            position: ltuMarkerLatLng,
+            label: "5",
+
+            title:"Blue Devil Cafe:\n-$8.00"
+        });
+
+// To add the marker to the map, call setMap();
+    starbuckmarker.setMap(map);
+    skylineMarker.setMap(map);
+    atlasMarker.setMap(map);
+    walmartMarker.setMap(map);
+    ltuMarker.setMap(map);
+
+    }
+    
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5R_n6ffFgU_OonqHyxc273-7Zruu6rAk&callback=initMap">
+
+</script>
+
+</body>
+</html>

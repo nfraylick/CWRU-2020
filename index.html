@@ -13,6 +13,7 @@
 
 <button style="background: url(img/HackathonButton2-05_copy.png)" class="open-button1" onclick="openForm()"></button>
 <button style="background: url(img/Register_Button.jpg)" class="open-button1" onclick="openForm1()"></button>
+<a href="Home_Page.html"><button class="open-button2">COS override</button></a>
 
 <div class="form-popup1" id="loginForm">
 	<div id="okta-login-container"></div>
@@ -42,8 +43,8 @@
 
 <script>
 var oktaSignIn = new OktaSignIn({
-    baseUrl: "{{ YOUR_ORG_URL }}",
-    clientId: "{{ YOUR_APP_CLIENT_ID }}",
+    baseUrl: "https://dev-758160.okta.com",
+    clientId: "0oa251uz9evpXmXO44x6",
     authParams: {
       issuer: "default",
       responseType: ['token', 'id_token'],

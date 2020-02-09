@@ -1,0 +1,11 @@
+Burger King
+ - 41.53849, -81.627449
+
+Auto Zone
+ - 41.520537, -81.539691
+
+Sunoco Gas Station
+ - 41.485668, -81.624348
+
+West Side Market
+ - 41.484683, -81.702945

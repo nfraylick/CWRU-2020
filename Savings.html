@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Savings.html</title>
+</head>
+	
+<style>
+	
+	body {background-image: url(img/HackathonButtonsBackground-07.png);
+	      background-size: 140%;}
+	.cheese{
+		margin-right: auto;
+		
+	}
+	img {align-content: right;
+		 margin: 100px 600px;
+	     position: fixed;}
+	
+	button {margin-top: 300px;
+	       margin-left: 150px;
+	       font-size: 300%;
+	       padding: 50px 50px;
+	       background-color: forestgreen;
+	       border: solid;
+	       border-color: forestgreen;
+	       position: fixed;
+		   border-radius: 100%;
+	       opacity: 0.7;
+	       cursor: pointer;}
+	
+</style>
+
+<body>
+
+<script type = "text/javascript">
+	
+let click = 0;
+	
+function showImg()
+{
+console.log(click++);
+var image = document.getElementById('image01');
+
+image.src="img/cactuscharacter-01.png"; //first image
+
+	
+	if(click == 2){
+		var elem = document.getElementById('image01');
+		image.src="img/cactuscharacter-02.png";
+	}
+	else if( click == 3){
+		var elem = document.getElementById('image01');
+		image.src="img/cactuscharacter-03.png";
+	}
+	else if(click == 4){
+		var elem = document.getElementById('image01');
+		image.src="img/cactuscharacter-04.png";
+	}
+}
+	
+
+
+</script><br/>
+<button onclick = "showImg()" value= "Show image" >$10</button>
+<img id="image01"><img id="image02"><br/>
+
+
+</body>
+</html>

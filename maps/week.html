@@ -3,6 +3,9 @@
     <head>
     <title></title>
  <style>
+   body{
+     background-image: url(/img/greenbackground-08.png) ;
+   }
      *{margin: 2px;
      padding: 0;
      }
@@ -71,6 +74,13 @@
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
+div.ex1 {
+  background-color: #96d2b2;
+  width: 600px;
+  height: 700px;
+  overflow: scroll;
+}
 </style>  
  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -78,13 +88,13 @@
 
 </head>
 
-<body>
+<body >
 
 <div width="40%"><div id="map"></div>
 <br />
 <br />
 <a href="../Home_page.html">Go home</a>
-	<container>
+	<container >
     <h1 style="font-size: 350%; position: 400px">Last Week</h1>
     <div class="dropdown" style="left: 50%; ">
       <button onclick="myFunction()" style="border-radius: 25px;" class="dropbtn">Filter</button>
@@ -95,6 +105,7 @@
       </div>
     </div>
     <br/>
+	<div class="ex1">
 		<img src="../img/icon.png" width="30" alt="icon" style="float:left"/>
 		<h1 style="font-family:helvetica; font-size: 300%">&nbsp;Starbucks</h1>
 		<ul style="position: 400px">
@@ -136,9 +147,29 @@
 		<br	/>
 		<br	/>
     <br	/>
-        
+    <img src="../img/icon.png" width="30" alt="icon" style="float:left"/>
+		<h1 style="font-family:helvetica; font-size: 300%">&nbsp;Burger King</h1>
+		<ul style="position: 400px">
+			<li><span>Catagory-</span> Food & Drink</li>
+			<li><span>Payment-</span> Chip Reader</li>
+		</ul>
+		<br	/>
+		<br	/>
+		<br	/>
+    <br	/>
+
+    <img src="../img/icon.png" width="30" alt="icon" style="float:left"/>
+		<h1 style="font-family:helvetica; font-size: 300%">&nbsp;Auto Zone</h1>
+		<ul style="position: 400px">
+			<li><span>Catagory-</span> Retail</li>
+			<li><span>Payment-</span> Chip Reader</li>
+		</ul>
+		<br	/>
+		<br	/>
+		<br	/>
+    <br	/>
 		
-	  
+  </div>
 	</container>
   
 </div>
@@ -174,7 +205,11 @@ window.onclick = function(event) {
         const skylineMarkerLatLng = new google.maps.LatLng(41.519118, -81.473809);
         const atlasMarkerLatLng = new google.maps.LatLng(41.523905, -81.436303);
         const walmartMarkerLatLng = new google.maps.LatLng(41.509687, -81.540041);
-        const ltuMarkerLatLng = new google.maps.LatLng(42.475396, -83.250162);
+        const bkMarkerLatLng = new google.maps.LatLng(41.53849, -81.627449);
+        const autozoneMarkerLatLng = new google.maps.LatLng(41.520537, -81.539691);
+        const SunocoMarkerLatLng = new google.maps.LatLng(41.485668, -81.624348);
+        const westsideMarkerLatLng = new google.maps.LatLng(41.484683, -81.702945);
+
 
 
         var mapOptions = {
@@ -207,19 +242,41 @@ window.onclick = function(event) {
             title:"Walmart:\n-$34.36"
         });
 
-        var ltuMarker = new google.maps.Marker({
-            position: ltuMarkerLatLng,
+        var bkMarker = new google.maps.Marker({
+            position: bkMarkerLatLng,
             label: "5",
-
-            title:"Blue Devil Cafe:\n-$8.00"
+            title:"Burger King:\n-$8.55"
         });
+        var autozoneMarker = new google.maps.Marker({
+            position: autozoneMarkerLatLng,
+            label: "6",
+            title:"Auto Zone:\n-$85.33"
+        });
+        var SunocoMarker = new google.maps.Marker({
+            position: SunocoMarkerLatLng,
+            label: "7",
+            title:"Sunoco Gas Station:\n-$36.70"
+        });
+        var westsideMarker = new google.maps.Marker({
+            position: westsideMarkerLatLng,
+            label: "8",
+            title:"West Side Market:\n-$17.82"
+        });
+        
 
 // To add the marker to the map, call setMap();
     starbuckmarker.setMap(map);
     skylineMarker.setMap(map);
     atlasMarker.setMap(map);
     walmartMarker.setMap(map);
-    ltuMarker.setMap(map);
+    bkMarker.setMap(map);
+    autozoneMarker.setMap(map);
+    SunocoMarker.setMap(map);
+    westsideMarker.setMap(map);
+
+
+
+
 
     }
     
